@@ -5,8 +5,18 @@
 </head>
 
 <body>
-    <p>Christian Greyoy</p>
-    <p>Barbudos C.A</p>
+    <div>
+        <h1><a href="/">Er Blog de Harden</a></h1>
+    </div>
+
+    {% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+    {% endfor %}
+
 </body>
 
 </html>
